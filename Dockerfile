@@ -17,7 +17,7 @@ RUN yum -y install jdk-8-linux-x64.rpm && rm -f jdk-8-linux-x64.rpm
 RUN yum -y install git docker
 
 # Install Bamboo
-RUN echo "-> Installing Bamboo BAMBOO_VERSION: $BAMBOO_VERSION | BAMBOO_HOME: $BAMBOO_HOME"
+RUN echo "-> Installing Bamboo"
 RUN mkdir -p $BAMBOO_HOME
 RUN wget --progress=dot:mega http://downloads.atlassian.com/software/bamboo/downloads/atlassian-bamboo-$BAMBOO_VERSION.tar.gz -O /tmp/atlassian-bamboo.tar.gz
 
